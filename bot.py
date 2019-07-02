@@ -4,7 +4,7 @@ from discord.ext import commands, tasks
 from itertools import cycle
 
 client = commands.Bot(command_prefix='!')
-TOKEN = 'NDcyMzc2OTIxMzE3OTY1ODU0.Dj39OQ.xiNVA5WgKUKO6FGC4UTQXVxv6kY'
+TOKEN = ''
 
 statusMsg = cycle(['with my toys', 'with my friends',
                    'with you :D', 'on my bike', 'with jumbo', 'with rocks'])
@@ -80,12 +80,6 @@ async def hate(ctx):
 async def love(ctx):
     author = str(ctx.author.id)
     await ctx.send("I love you <@" + author + ">")
-
-
-@client.command()
-async def fag(ctx):
-    user = random.choice(ctx.guild.members)
-    await ctx.send(user.mention + " is a fag lol")
 
 
 client.run(TOKEN)
